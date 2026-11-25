@@ -1,0 +1,133 @@
+/* Sud Solutions — Editorial Corporate & Industrial-Tech Design */
+:root {
+  --ink-dark: #0A0C09;
+  --ink-panel: #121510;
+  --paper-light: #F4F5F0;
+  --paper-card: #FFFFFF;
+  --lime: #9BBF5F;
+  --olive: #6B8E35;
+  --deep-olive: #3F5D16;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Sora', sans-serif;
+  background-color: var(--ink-dark);
+  color: #F9FAFB;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono-tech {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+/* Crisp Primary Button (Sud Solutions Signature Gradient) */
+.btn-primary {
+  background: linear-gradient(135deg, #9BBF5F 0%, #73963C 60%, #4A6D1A 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 10px 24px -8px rgba(115, 150, 60, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Custom Range Slider for ROI Calculator */
+input[type="range"].sud-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  background: #E2E4DC;
+  outline: none;
+}
+
+input[type="range"].sud-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #4A6D1A;
+  border: 3px solid #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth Scroll Reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-dark {
+  background-color: #0A0C09;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-dark:hover {
+  background-color: #1C2119;
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Filter Pills on Light/Dark */
+.filter-tab.active {
+  background-color: #0A0C09;
+  color: #FFFFFF;
+  border-color: #0A0C09;
+}
+
+.module-cell {
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.module-cell.selected {
+  background-color: #EEF5E1;
+  border-color: #6B8E35;
+  color: #1F2E0B;
+}
+
+/* Subtle Pulse */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.live-dot {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
