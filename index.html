@@ -68,16 +68,16 @@
 <body class="bg-[#0A0C09] text-white selection:bg-[#9BBF5F] selection:text-[#0A0C09]">
 
   <!-- Slim Announcement Strip -->
-  <div class="bg-[#3F5D16] text-white text-xs py-2 px-4">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
+  <div class="bg-[#3F5D16] text-white text-[11px] sm:text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5">
         <span class="font-bold uppercase tracking-wider text-[#D9F7A8]">PyMEs:</span>
-        <span>50% de descuento en implementación eligiendo 5 módulos.</span>
-        <a href="#modulos" class="underline underline-offset-2 font-semibold hover:text-[#D9F7A8]">Armar paquete →</a>
+        <span>50% OFF en implementación (5 módulos).</span>
+        <a href="#modulos" class="underline underline-offset-2 font-semibold hover:text-[#D9F7A8] whitespace-nowrap">Armar paquete →</a>
       </div>
       <a href="https://wa.me/529934306180?text=Hola%20Sud%20Solutions%2C%20quiero%20hablar%20con%20un%20asesor."
          target="_blank" rel="noopener noreferrer"
-         class="font-semibold hover:text-[#D9F7A8] transition whitespace-nowrap">
+         class="hidden sm:inline-block font-semibold hover:text-[#D9F7A8] transition whitespace-nowrap">
         Escríbenos por WhatsApp →
       </a>
     </div>
@@ -85,9 +85,9 @@
 
   <!-- Full-Width Architectural Header -->
   <header class="sticky top-0 z-50 bg-[#0A0C09]/95 backdrop-blur-md border-b border-white/10">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
       <a href="#inicio" class="flex items-center shrink-0">
-        <img src="https://www.sudsolutions.mx/img/LOGO2.webp" alt="Sud Solutions" class="h-9 w-auto object-contain" />
+        <img src="https://www.sudsolutions.mx/img/LOGO2.webp" alt="Sud Solutions" class="h-7 sm:h-9 w-auto object-contain" />
       </a>
 
       <ul class="hidden lg:flex items-center gap-8 text-[13px] font-medium text-gray-300">
@@ -98,7 +98,7 @@
         <li><a href="#agendar-demo" class="hover:text-white transition">Contacto</a></li>
       </ul>
 
-      <div class="flex items-center gap-3 shrink-0">
+      <div class="flex items-center gap-2.5 shrink-0">
         <div class="relative">
           <button id="login-btn" type="button"
                   class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-md border border-white/15 hover:border-white/35 text-xs font-medium text-gray-200 transition whitespace-nowrap">
@@ -112,7 +112,7 @@
           </div>
         </div>
 
-        <a href="#agendar-demo" class="btn-primary text-xs sm:text-sm px-5 py-2 rounded-full whitespace-nowrap">
+        <a href="#agendar-demo" class="hidden sm:inline-flex btn-primary text-xs sm:text-sm px-5 py-2 rounded-full whitespace-nowrap">
           Agendar demo
         </a>
 
@@ -131,31 +131,31 @@
     </div>
   </header>
 
-  <!-- FULL-BLEED CINEMATIC HERO -->
-  <section id="inicio" class="relative min-h-[600px] lg:min-h-[680px] flex items-center overflow-hidden bg-[#0A0C09]">
-    <!-- Full-Bleed Background Photo (Visible & Sharp on the Right) -->
+  <!-- FULL-BLEED CINEMATIC HERO (CENTERED ON MOBILE, LEFT-ALIGNED ON DESKTOP) -->
+  <section id="inicio" class="relative min-h-[560px] lg:min-h-[680px] flex items-center overflow-hidden bg-[#0A0C09]">
+    <!-- Full-Bleed Background Photo -->
     <img src="assets/hero-fleet.jpg" alt="Flota controlada con Sud Solutions"
-         class="absolute inset-0 w-full h-full object-cover object-right opacity-95" />
-    <!-- Directional Mask Only Behind Left Text -->
-    <div class="absolute inset-0 bg-gradient-to-r from-[#0A0C09] via-[#0A0C09]/75 via-45% to-transparent"></div>
+         class="absolute inset-0 w-full h-full object-cover object-center lg:object-right opacity-85 lg:opacity-95" />
+    <!-- Mobile centered dark scrim + Desktop directional left mask -->
+    <div class="absolute inset-0 bg-[#0A0C09]/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-[#0A0C09] lg:via-[#0A0C09]/75 lg:via-45% lg:to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C09] via-transparent to-transparent"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 py-16 lg:py-24">
-      <div class="max-w-2xl space-y-6">
-        <div class="inline-flex items-center gap-2 font-mono-tech text-xs tracking-wider uppercase text-[#C8EC93]">
+    <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 py-12 lg:py-24">
+      <div class="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left space-y-5 sm:space-y-6">
+        <div class="inline-flex items-center justify-center lg:justify-start gap-2 font-mono-tech text-[11px] sm:text-xs tracking-wider uppercase text-[#C8EC93]">
           <span class="w-2 h-2 rounded-full bg-[#9BBF5F] live-dot"></span>
           <span>Desde 2015 · México · Colombia · EE.UU.</span>
         </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold tracking-tight leading-[1.05] text-white">
+        <h1 class="text-3xl sm:text-5xl lg:text-[3.6rem] font-extrabold tracking-tight leading-[1.08] text-white">
           Control total de tu flota, combustible y operación.
         </h1>
 
-        <p class="text-base sm:text-lg text-gray-200 max-w-xl leading-relaxed">
+        <p class="text-sm sm:text-lg text-gray-200 max-w-xl mx-auto lg:mx-0 leading-relaxed">
           Centraliza administración, Carta Porte, mantenimiento, rastreo GPS y Dashcam IA en <strong class="text-white">Ananta ERP</strong>. Sin costos ocultos.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 pt-1">
+        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 pt-1">
           <a href="#agendar-demo" class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base">
             Solicitar demo personalizada →
           </a>
@@ -166,7 +166,7 @@
         </div>
 
         <!-- Clean Metrics Strip -->
-        <div class="pt-6 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl">
+        <div class="pt-6 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-xl mx-auto lg:mx-0">
           <div>
             <div class="text-2xl font-extrabold text-white">10+</div>
             <div class="text-xs text-gray-300">Años de experiencia</div>
@@ -409,7 +409,7 @@
           <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">Explora por departamento y arma tu paquete PyME</h2>
         </div>
 
-        <div class="bg-[#0A0C09] text-white rounded-xl px-5 py-3.5 flex items-center gap-5 shrink-0 shadow-md">
+        <div class="bg-[#0A0C09] text-white rounded-xl px-5 py-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-5 shrink-0 shadow-md w-full lg:w-auto">
           <div>
             <div class="font-mono-tech text-[10px] text-[#9BBF5F] uppercase">Paquete PyME 50% OFF</div>
             <div id="pyme-count" class="text-sm font-bold text-white">0 / 5 seleccionados</div>
@@ -439,7 +439,7 @@
           Ingeniería mexicana desde 2015 para industrias que no se detienen
         </h2>
       </div>
-      <div class="md:col-span-7 grid grid-cols-3 gap-4 text-center sm:text-left">
+      <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-left">
         <div class="p-3.5 rounded-lg bg-[#0A0C09] border border-white/10">
           <div class="text-sm font-bold text-white">Oil & Gas</div>
           <div class="text-xs text-gray-400 mt-0.5">Control de flotillas y seguridad en ruta</div>
@@ -495,7 +495,7 @@
         </div>
 
         <!-- Mini Breakdown -->
-        <div class="grid grid-cols-3 gap-3 pt-2 border-t border-gray-100 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-gray-100 text-xs">
           <div class="p-3 rounded-lg bg-[#F8F9F6]">
             <div class="text-gray-500">Combustible</div>
             <div class="font-bold text-[#0A0C09] mt-0.5">-16% promedio</div>
@@ -548,7 +548,7 @@
             </div>
           </div>
 
-          <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-[#9BBF5F]/10 border border-[#9BBF5F]/25 text-xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 px-4 py-3 rounded-xl bg-[#9BBF5F]/10 border border-[#9BBF5F]/25 text-xs">
             <span class="text-gray-300">Proyección anual</span>
             <span id="calc-yearly" class="text-base font-extrabold text-[#C8EC93]">$1,344,000 MXN / año</span>
           </div>
@@ -556,7 +556,7 @@
 
         <div class="relative z-10 space-y-2.5">
           <button id="calc-apply-btn" type="button"
-                  class="btn-primary w-full py-3.5 px-6 rounded-full text-sm shadow-lg">
+                  class="btn-primary w-full py-3.5 px-4 sm:px-6 rounded-full text-xs sm:text-sm shadow-lg whitespace-nowrap">
             Cotizar para mis 25 unidades →
           </button>
           <div class="text-center text-[11px] text-gray-400">
@@ -842,9 +842,9 @@
   <!-- Floating WhatsApp Direct Pill -->
   <a href="https://wa.me/529934306180?text=Hola%20Sud%20Solutions%2C%20me%20interesa%20una%20demo."
      target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp"
-     class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-[#070807] font-bold text-xs sm:text-sm px-4 py-3 rounded-full shadow-2xl transition hover:scale-105">
-    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.375c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969s-4.453-10-9.969-10zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.531.078-1.203.109-1.953-.125-.453-.141-1.047-.344-1.781-.656-3.125-1.359-5.172-4.516-5.328-4.719-.156-.203-1.281-1.703-1.281-3.25s.813-2.297 1.094-2.609c.281-.313.625-.391.828-.391.203 0 .422.016.609.016.203 0 .453-.078.703.531.266.625.891 2.188.969 2.344.078.156.125.344.016.547-.109.203-.156.328-.313.516-.156.188-.328.406-.469.547-.156.156-.328.328-.141.641.188.313.844 1.391 1.813 2.25 1.25 1.109 2.297 1.453 2.609 1.609.313.156.5.125.688-.078.188-.203.797-.938 1.016-1.25.219-.313.422-.266.719-.156.297.109 1.859.875 2.172 1.031.313.156.531.234.609.359.078.125.078.734-.172 1.438z"/></svg>
-    <span class="hidden sm:inline">Asesor en línea</span>
+     class="fixed bottom-4 right-4 z-40 inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1DA851] text-[#070807] font-bold text-xs sm:text-sm w-12 h-12 lg:w-auto lg:h-auto lg:px-4 lg:py-3 rounded-full shadow-2xl transition hover:scale-105">
+    <svg class="w-5 h-5 lg:w-4 lg:h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.375c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969s-4.453-10-9.969-10zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.531.078-1.203.109-1.953-.125-.453-.141-1.047-.344-1.781-.656-3.125-1.359-5.172-4.516-5.328-4.719-.156-.203-1.281-1.703-1.281-3.25s.813-2.297 1.094-2.609c.281-.313.625-.391.828-.391.203 0 .422.016.609.016.203 0 .453-.078.703.531.266.625.891 2.188.969 2.344.078.156.125.344.016.547-.109.203-.156.328-.313.516-.156.188-.328.406-.469.547-.156.156-.328.328-.141.641.188.313.844 1.391 1.813 2.25 1.25 1.109 2.297 1.453 2.609 1.609.313.156.5.125.688-.078.188-.203.797-.938 1.016-1.25.219-.313.422-.266.719-.156.297.109 1.859.875 2.172 1.031.313.156.531.234.609.359.078.125.078.734-.172 1.438z"/></svg>
+    <span class="hidden lg:inline">Escríbenos</span>
   </a>
 
   <script src="app.js"></script>
